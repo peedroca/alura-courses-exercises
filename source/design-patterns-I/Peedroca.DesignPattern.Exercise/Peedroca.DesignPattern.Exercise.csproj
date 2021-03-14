@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="CalculadoraDeDesconto.cs" />
     <Compile Include="CalculadoraDeImpostos.cs" />
+    <Compile Include="Descontos\DescontoPorVendaCasada.cs" />
     <Compile Include="Descontos\SemDesconto.cs" />
     <Compile Include="Descontos\DescontoValorMaiorQuinhentos.cs" />
     <Compile Include="Descontos\DescontoMaisCincoItems.cs" />

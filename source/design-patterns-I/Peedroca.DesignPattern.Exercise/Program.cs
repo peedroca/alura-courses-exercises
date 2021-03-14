@@ -11,11 +11,11 @@ namespace Peedroca.DesignPattern.Exercise
     {
         static void Main(string[] args)
         {
-            var orcamento = new Orcamento(501);
+            var orcamento = new Orcamento(300);
             orcamento.AdicionarItem(new[] 
             { 
-                new Item("Toddy", 2),
-                new Item("Toddy", 2),
+                new Item("Lapis", 2),
+                new Item("Caneta", 2),
                 new Item("Toddy", 2),
                 new Item("Biscoito", 1),
             });
