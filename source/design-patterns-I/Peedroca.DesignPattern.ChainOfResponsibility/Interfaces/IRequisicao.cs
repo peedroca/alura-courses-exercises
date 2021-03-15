@@ -10,7 +10,7 @@ namespace Peedroca.DesignPattern.ChainOfResponsibility.Interfaces
 {
     public interface IRequisicao
     {
-        IRequisicao Proximo { get; set; }
+        IRequisicao Proximo { get; }
 
         string Converter(Conta conta, EFormato formato);
     }

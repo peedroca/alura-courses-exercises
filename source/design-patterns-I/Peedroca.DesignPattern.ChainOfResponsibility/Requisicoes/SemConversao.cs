@@ -11,7 +11,7 @@ namespace Peedroca.DesignPattern.ChainOfResponsibility.Requisicoes
 {
     public class SemConversao : IRequisicao
     {
-        public IRequisicao Proximo { get; set; }
+        public IRequisicao Proximo { get; private set; }
 
         public string Converter(Conta conta, EFormato formato)
         {

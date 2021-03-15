@@ -10,6 +10,7 @@ namespace Peedroca.DesignPattern.ChainOfResponsibility.Enums
     {
         XML,
         CSV,
-        PORCENTO
+        PORCENTO,
+        TESTE
     }
 }

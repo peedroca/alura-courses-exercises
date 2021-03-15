@@ -13,17 +13,16 @@ namespace Peedroca.DesignPattern.ChainOfResponsibility
     {
         public static void Converter(Conta conta, EFormato formato)
         {
-            var r1 = new CSV();
-            var r2 = new XML();
-            var r3 = new Porcento();
-            var r4 = new SemConversao();
-
-            r1.Proximo = r2;
-            r2.Proximo = r3;
-            r3.Proximo = r4;
+            var r3 = new Porcento(null);
+            var r2 = new XML(r3);
+            var r1 = new CSV(r2);
 
             var conversao = r1.Converter(conta, formato);
-            Console.WriteLine(conversao);
+
+            if(!string.IsNullOrEmpty(conversao))
+                Console.WriteLine(conversao);
+            else
+                Console.WriteLine("Conversão não encontrada.");
         }
     }
 }

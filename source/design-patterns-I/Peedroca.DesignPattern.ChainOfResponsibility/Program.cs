@@ -13,7 +13,7 @@ namespace Peedroca.DesignPattern.ChainOfResponsibility
         static void Main(string[] args)
         {
             var conta = new Conta("Pedro", 500);
-            ConversorDeRequisicao.Converter(conta, EFormato.PORCENTO);
+            ConversorDeRequisicao.Converter(conta, EFormato.TESTE);
 
             Console.ReadKey();
         }
