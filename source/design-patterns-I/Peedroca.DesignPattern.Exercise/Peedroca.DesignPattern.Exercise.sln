@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.Exer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.Investimento", "..\Peedroca.DesignPattern.Investimento\Peedroca.DesignPattern.Investimento.csproj", "{3B359FAC-B396-4355-8971-E4FA55D5D248}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.ChainOfResponsibility", "..\Peedroca.DesignPattern.ChainOfResponsibility\Peedroca.DesignPattern.ChainOfResponsibility.csproj", "{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3B359FAC-B396-4355-8971-E4FA55D5D248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B359FAC-B396-4355-8971-E4FA55D5D248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B359FAC-B396-4355-8971-E4FA55D5D248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
