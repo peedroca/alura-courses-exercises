@@ -11,6 +11,7 @@ namespace Peedroca.DesignPattern.Investimento
     {
         static void Main(string[] args)
         {
+
             var conta = new ContaBancaria(1000);
 
             new RealizadorDeInvestimentos().Calcular(conta, new Conservador());
