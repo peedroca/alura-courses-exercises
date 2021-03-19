@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Peedroca.DesignPattern.Exercise.Interfaces
 {
-    internal interface Imposto
+    internal interface IImposto
     {
         double Calcular(Orcamento orcamento);
     }

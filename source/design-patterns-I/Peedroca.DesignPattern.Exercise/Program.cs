@@ -11,16 +11,16 @@ namespace Peedroca.DesignPattern.Exercise
     {
         static void Main(string[] args)
         {
-            var orcamento = new Orcamento(300);
+            var orcamento = new Orcamento(501);
             orcamento.AdicionarItem(new[] 
             { 
-                new Item("Lapis", 2),
+                new Item("Lapis", 101),
                 new Item("Caneta", 2),
                 new Item("Toddy", 2),
                 new Item("Biscoito", 1),
             });
 
-            CalculadoraDeDesconto.Calcula(orcamento);
+            CalculadoraDeImpostos.CalcularImposto(orcamento, new IKCV());
             Console.ReadKey();
         }
     }

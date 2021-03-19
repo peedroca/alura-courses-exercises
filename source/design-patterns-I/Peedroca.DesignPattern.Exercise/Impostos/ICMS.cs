@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Peedroca.DesignPattern.Exercise.Impostos
 {
-    internal sealed class ICMS : Imposto
+    internal sealed class ICMS : IImposto
     {
         public double Calcular(Orcamento orcamento)
         {

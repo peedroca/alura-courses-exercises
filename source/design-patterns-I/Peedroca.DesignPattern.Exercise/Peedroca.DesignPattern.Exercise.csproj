@@ -51,6 +51,9 @@
     <Compile Include="Descontos\DescontoMaisCincoItems.cs" />
     <Compile Include="Impostos\ICCC.cs" />
     <Compile Include="Impostos\ICMS.cs" />
+    <Compile Include="Impostos\ICPP.cs" />
+    <Compile Include="Impostos\IKCV.cs" />
+    <Compile Include="Impostos\Imposto.cs" />
     <Compile Include="Impostos\ISS.cs" />
     <Compile Include="Interfaces\IDesconto.cs" />
     <Compile Include="Interfaces\Imposto.cs" />
