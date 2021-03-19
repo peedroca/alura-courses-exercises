@@ -15,12 +15,13 @@ namespace Peedroca.DesignPattern.Exercise
             orcamento.AdicionarItem(new[] 
             { 
                 new Item("Lapis", 101),
+                new Item("Lapis", 101),
                 new Item("Caneta", 2),
                 new Item("Toddy", 2),
                 new Item("Biscoito", 1),
             });
 
-            CalculadoraDeImpostos.CalcularImposto(orcamento, new IKCV());
+            CalculadoraDeImpostos.CalcularImposto(orcamento, new IHIT());
             Console.ReadKey();
         }
     }

@@ -10,8 +10,8 @@
                 return CalcularMenorImposto(orcamento);
         }
 
-        internal abstract bool DeveUsarMaiorImposto(Orcamento orcamento);
-        internal abstract double CalcularMaiorImposto(Orcamento orcamento);
-        internal abstract double CalcularMenorImposto(Orcamento orcamento);
+        protected abstract bool DeveUsarMaiorImposto(Orcamento orcamento);
+        protected abstract double CalcularMaiorImposto(Orcamento orcamento);
+        protected abstract double CalcularMenorImposto(Orcamento orcamento);
     }
 }
