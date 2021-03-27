@@ -21,7 +21,7 @@ namespace Peedroca.DesignPattern.Exercise
                 new Item("Biscoito", 1),
             });
 
-            CalculadoraDeImpostos.CalcularImposto(orcamento, new ICMS());
+            CalculadoraDeImpostos.CalcularImposto(orcamento, new ICMS(new ImpostoMuitoAlto()));
             Console.ReadKey();
         }
     }

@@ -22,11 +22,11 @@ namespace Peedroca.DesignPattern.Exercise.Impostos
         public override double Calcular(Orcamento orcamento)
         {
             if (orcamento.Valor < 1000)
-                return orcamento.Valor * 0.05;
+                return orcamento.Valor * 0.05 + CalcularOutroImposto(orcamento);
             else if (orcamento.Valor < 3000 && orcamento.Valor > 1000)
-                return orcamento.Valor * 0.07;
+                return orcamento.Valor * 0.07 + CalcularOutroImposto(orcamento);
             else 
-                return orcamento.Valor * 0.08 + 30;
+                return orcamento.Valor * 0.08 + 30 + CalcularOutroImposto(orcamento);
         }
     }
 }

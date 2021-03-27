@@ -55,6 +55,7 @@
     <Compile Include="Impostos\IHIT.cs" />
     <Compile Include="Impostos\IKCV.cs" />
     <Compile Include="Impostos\Imposto.cs" />
+    <Compile Include="Impostos\ImpostoMuitoAlto.cs" />
     <Compile Include="Impostos\ISS.cs" />
     <Compile Include="Interfaces\IDesconto.cs" />
     <Compile Include="Interfaces\IImposto.cs" />

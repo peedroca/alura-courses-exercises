@@ -21,12 +21,12 @@ namespace Peedroca.DesignPattern.Exercise.Impostos
 
         protected override double CalcularMaiorImposto(Orcamento orcamento)
         {
-            return orcamento.Valor * 0.13 + 100;
+            return orcamento.Valor * 0.13 + 100 + CalcularOutroImposto(orcamento);
         }
 
         protected override double CalcularMenorImposto(Orcamento orcamento)
         {
-            return orcamento.Valor * (0.01 * orcamento.Items.Count());
+            return orcamento.Valor * (0.01 * orcamento.Items.Count()) + CalcularOutroImposto(orcamento);
         }
 
         protected override bool DeveUsarMaiorImposto(Orcamento orcamento)
