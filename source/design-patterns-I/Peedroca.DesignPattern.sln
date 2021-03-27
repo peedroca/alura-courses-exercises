@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.Exercise", "Peedroca.DesignPattern.Exercise.csproj", "{250749C5-1969-43D9-83C7-208E425567A2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.ChainOfResponsibility", "Peedroca.DesignPattern.ChainOfResponsibility\Peedroca.DesignPattern.ChainOfResponsibility.csproj", "{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.Investimento", "..\Peedroca.DesignPattern.Investimento\Peedroca.DesignPattern.Investimento.csproj", "{3B359FAC-B396-4355-8971-E4FA55D5D248}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.Exercise", "Peedroca.DesignPattern.Exercise\Peedroca.DesignPattern.Exercise.csproj", "{250749C5-1969-43D9-83C7-208E425567A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.ChainOfResponsibility", "..\Peedroca.DesignPattern.ChainOfResponsibility\Peedroca.DesignPattern.ChainOfResponsibility.csproj", "{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.Investimento", "Peedroca.DesignPattern.Investimento\Peedroca.DesignPattern.Investimento.csproj", "{3B359FAC-B396-4355-8971-E4FA55D5D248}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.TemplateMethod", "..\Peedroca.DesignPattern.TemplateMethod\Peedroca.DesignPattern.TemplateMethod.csproj", "{DB91B16C-2474-4926-99DE-FFA393238891}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.TemplateMethod", "Peedroca.DesignPattern.TemplateMethod\Peedroca.DesignPattern.TemplateMethod.csproj", "{DB91B16C-2474-4926-99DE-FFA393238891}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +17,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Release|Any CPU.Build.0 = Release|Any CPU
 		{250749C5-1969-43D9-83C7-208E425567A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{250749C5-1969-43D9-83C7-208E425567A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{250749C5-1969-43D9-83C7-208E425567A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -25,10 +29,6 @@ Global
 		{3B359FAC-B396-4355-8971-E4FA55D5D248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B359FAC-B396-4355-8971-E4FA55D5D248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B359FAC-B396-4355-8971-E4FA55D5D248}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BB8CFAC-0A84-4546-9BB2-9BFF3A68C913}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DB91B16C-2474-4926-99DE-FFA393238891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB91B16C-2474-4926-99DE-FFA393238891}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB91B16C-2474-4926-99DE-FFA393238891}.Release|Any CPU.ActiveCfg = Release|Any CPU
