@@ -3,8 +3,18 @@ using System.Linq;
 
 namespace Peedroca.DesignPattern.Exercise.Impostos
 {
-    internal sealed class IKCV : Imposto, IImposto
+    internal sealed class IKCV : Imposto
     {
+        public IKCV()
+        {
+
+        }
+
+        public IKCV(IImposto outroImposto) : base(outroImposto)
+        {
+
+        }
+
         protected override double CalcularMaiorImposto(Orcamento orcamento)
         {
             return orcamento.Valor * 0.1;

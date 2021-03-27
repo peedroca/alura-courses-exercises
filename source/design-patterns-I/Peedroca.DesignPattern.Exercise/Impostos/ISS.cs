@@ -9,9 +9,19 @@ namespace Peedroca.DesignPattern.Exercise.Impostos
 {
     internal sealed class ISS : IImposto
     {
-        public double Calcular(Orcamento orcamento)
+        public ISS()
         {
-            return orcamento.Valor * 0.6;
+
+        }
+
+        public ISS(IImposto outroImposto) : base(outroImposto)
+        {
+
+        }
+
+        public override double Calcular(Orcamento orcamento)
+        {
+            return orcamento.Valor * 0.6 + CalcularOutroImposto(orcamento);
         }
     }
 }

@@ -9,9 +9,19 @@ namespace Peedroca.DesignPattern.Exercise.Impostos
 {
     internal sealed class ICMS : IImposto
     {
-        public double Calcular(Orcamento orcamento)
+        public ICMS()
         {
-            return (orcamento.Valor * 0.5) + 50;
+
+        }
+
+        public ICMS(IImposto outroImposto) : base(outroImposto)
+        {
+
+        }
+
+        public override double Calcular(Orcamento orcamento)
+        {
+            return (orcamento.Valor * 0.5) + 50 + CalcularOutroImposto(orcamento);
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Peedroca.DesignPattern.Exercise
 {
-    internal class Item
+    public class Item
     {
         public Item(string nome, double valor)
         {

@@ -2,7 +2,7 @@
 
 namespace Peedroca.DesignPattern.Exercise
 {
-    internal sealed class Orcamento
+    public sealed class Orcamento
     {
         public Orcamento(double valor)
         {

@@ -7,8 +7,18 @@ using System.Threading.Tasks;
 
 namespace Peedroca.DesignPattern.Exercise.Impostos
 {
-    internal sealed class IHIT : Imposto, IImposto
+    internal sealed class IHIT : Imposto
     {
+        public IHIT()
+        {
+
+        }
+
+        public IHIT(IImposto outroImposto) : base(outroImposto)
+        {
+
+        }
+
         protected override double CalcularMaiorImposto(Orcamento orcamento)
         {
             return orcamento.Valor * 0.13 + 100;

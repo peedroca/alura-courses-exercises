@@ -1,8 +1,20 @@
-﻿namespace Peedroca.DesignPattern.Exercise.Impostos
+﻿using Peedroca.DesignPattern.Exercise.Interfaces;
+
+namespace Peedroca.DesignPattern.Exercise.Impostos
 {
-    internal abstract class Imposto
+    internal abstract class Imposto : IImposto
     {
-        public double Calcular(Orcamento orcamento)
+        public Imposto()
+        {
+
+        }
+
+        public Imposto(IImposto outroImposto) : base(outroImposto)
+        {
+
+        }
+
+        public override double Calcular(Orcamento orcamento)
         {
             if (DeveUsarMaiorImposto(orcamento))
                 return CalcularMaiorImposto(orcamento);

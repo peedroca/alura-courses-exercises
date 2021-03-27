@@ -9,7 +9,17 @@ namespace Peedroca.DesignPattern.Exercise.Impostos
 {
     internal sealed class ICCC : IImposto
     {
-        public double Calcular(Orcamento orcamento)
+        public ICCC()
+        {
+
+        }
+
+        public ICCC(IImposto outroImposto) : base(outroImposto)
+        {
+
+        }
+
+        public override double Calcular(Orcamento orcamento)
         {
             if (orcamento.Valor < 1000)
                 return orcamento.Valor * 0.05;
