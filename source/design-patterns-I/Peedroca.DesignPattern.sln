@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.Temp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.Decorator", "Peedroca.DesignPattern.Decorator\Peedroca.DesignPattern.Decorator.csproj", "{78E6C094-3426-4FD9-84EE-51CC487E7C82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peedroca.DesignPattern.State", "Peedroca.DesignPattern.State\Peedroca.DesignPattern.State.csproj", "{215951C5-2227-40DF-9AEC-7B643FAE8E65}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{78E6C094-3426-4FD9-84EE-51CC487E7C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78E6C094-3426-4FD9-84EE-51CC487E7C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78E6C094-3426-4FD9-84EE-51CC487E7C82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{215951C5-2227-40DF-9AEC-7B643FAE8E65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{215951C5-2227-40DF-9AEC-7B643FAE8E65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{215951C5-2227-40DF-9AEC-7B643FAE8E65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{215951C5-2227-40DF-9AEC-7B643FAE8E65}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
