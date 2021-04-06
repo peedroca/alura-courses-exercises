@@ -20,8 +20,19 @@ namespace Peedroca.DesignPattern.Exercise
                 new Item("Toddy", 2),
                 new Item("Biscoito", 1),
             });
+            
+            Console.WriteLine("Valor Inicial " + orcamento.Valor);
 
-            CalculadoraDeImpostos.CalcularImposto(orcamento, new ICMS(new ImpostoMuitoAlto()));
+            orcamento.AplicaDescontoExtra();
+            Console.WriteLine("Valor Em aprovação " + orcamento.Valor);
+
+            orcamento.Aprovar();
+            orcamento.AplicaDescontoExtra();
+            Console.WriteLine("Valor Aprovado " + orcamento.Valor);
+
+            orcamento.Finalizar();
+            Console.WriteLine("Valor Finalizado " + orcamento.Valor);
+
             Console.ReadKey();
         }
     }
