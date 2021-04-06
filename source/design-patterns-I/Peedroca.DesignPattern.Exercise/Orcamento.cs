@@ -18,15 +18,40 @@ namespace Peedroca.DesignPattern.Exercise
 
         public EstadoDoOrcamento EstadoDoOrcamento { get; private set; }
 
+        public bool DescontoExtraConcedido { get; private set; }
+
         public void AtualizarEstado(EstadoDoOrcamento estado)
         {
             EstadoDoOrcamento = estado;
         }
 
-        public void AplicaDescontoExtra() => EstadoDoOrcamento.AplicarDesconto(this);
-        public void Aprovar() => EstadoDoOrcamento.Aprovar(this);
-        public void Reprovar() => EstadoDoOrcamento.Reprovar(this);
-        public void Finalizar() => EstadoDoOrcamento.Finalizar(this);
+        public void AplicaDescontoExtra() 
+        {
+            if (!DescontoExtraConcedido)
+            {
+                EstadoDoOrcamento.AplicarDesconto(this);
+                DescontoExtraConcedido = true;
+            }
+            else
+                throw new System.ArgumentException("Já foi aplicado um desconto extra a esse orcamento.");
+        }
+        public void Aprovar() 
+        { 
+            EstadoDoOrcamento.Aprovar(this);
+            DescontoExtraConcedido = false;
+        }
+
+        public void Reprovar()
+        {
+            EstadoDoOrcamento.Reprovar(this);
+            DescontoExtraConcedido = false;
+        }
+
+        public void Finalizar()
+        {
+            EstadoDoOrcamento.Finalizar(this);
+            DescontoExtraConcedido = false;
+        }
 
         public void AplicarDesconto(double valor)
         {

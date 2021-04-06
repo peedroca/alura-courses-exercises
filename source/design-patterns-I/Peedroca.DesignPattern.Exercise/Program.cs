@@ -24,6 +24,7 @@ namespace Peedroca.DesignPattern.Exercise
             Console.WriteLine("Valor Inicial " + orcamento.Valor);
 
             orcamento.AplicaDescontoExtra();
+            orcamento.AplicaDescontoExtra();
             Console.WriteLine("Valor Em aprovação " + orcamento.Valor);
 
             orcamento.Aprovar();
