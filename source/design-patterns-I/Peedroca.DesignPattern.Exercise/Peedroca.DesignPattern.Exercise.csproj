@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AposGerarNota\GuardaNoBanco.cs" />
+    <Compile Include="AposGerarNota\EnviarPorEmail.cs" />
+    <Compile Include="AposGerarNota\IAposGerarNota.cs" />
+    <Compile Include="AposGerarNota\Multiplicador.cs" />
     <Compile Include="CalculadoraDeDesconto.cs" />
     <Compile Include="CalculadoraDeImpostos.cs" />
     <Compile Include="Descontos\DescontoPorVendaCasada.cs" />
@@ -60,6 +64,10 @@
     <Compile Include="Interfaces\IDesconto.cs" />
     <Compile Include="Interfaces\IImposto.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="ItemDaNota.cs" />
+    <Compile Include="ItemDaNotaBuilder.cs" />
+    <Compile Include="NotaFiscal.cs" />
+    <Compile Include="NotaFiscalBuilder.cs" />
     <Compile Include="Orcamento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

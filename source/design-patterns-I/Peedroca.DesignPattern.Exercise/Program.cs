@@ -1,4 +1,5 @@
-﻿using Peedroca.DesignPattern.Exercise.Impostos;
+﻿using Peedroca.DesignPattern.Exercise.AposGerarNota;
+using Peedroca.DesignPattern.Exercise.Impostos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,29 +12,26 @@ namespace Peedroca.DesignPattern.Exercise
     {
         static void Main(string[] args)
         {
-            var orcamento = new Orcamento(501);
-            orcamento.AdicionarItem(new[] 
-            { 
-                new Item("Lapis", 101),
-                new Item("Lapis", 101),
-                new Item("Caneta", 2),
-                new Item("Toddy", 2),
-                new Item("Biscoito", 1),
-            });
-            
-            Console.WriteLine("Valor Inicial " + orcamento.Valor);
+            var item1 = new ItemDaNotaBuilder()
+                .ComDescricao("Açucar")
+                .ComValor(10)
+                .Construir();
 
-            orcamento.AplicaDescontoExtra();
-            orcamento.AplicaDescontoExtra();
-            Console.WriteLine("Valor Em aprovação " + orcamento.Valor);
+            var item2 = new ItemDaNotaBuilder()
+                .ComDescricao("Arroz")
+                .ComValor(20)
+                .Construir();
 
-            orcamento.Aprovar();
-            orcamento.AplicaDescontoExtra();
-            Console.WriteLine("Valor Aprovado " + orcamento.Valor);
+            var builder = new NotaFiscalBuilder(new List<IAposGerarNota>(){ new EnviarPorEmail(), new GuardaNoBanco(), new Multiplicador(10) })
+                .ComRazaoSocial("Peedroca")
+                .ComObservacoes("obs da nota")
+                .Com(item1)
+                .Com(item2);
 
-            orcamento.Finalizar();
-            Console.WriteLine("Valor Finalizado " + orcamento.Valor);
+            var notaFiscal = builder.Construir();
 
+            Console.WriteLine(notaFiscal.ValorBruto);
+            Console.WriteLine(notaFiscal.Impostos);
             Console.ReadKey();
         }
     }
