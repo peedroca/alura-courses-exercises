@@ -12,7 +12,7 @@ namespace Peedroca.DesignPattern.Decorator
     {
         static void Main(string[] args)
         {
-            Filtro filtro = new SaldoMenorQueCem(new AberturaMesAtual());
+            Filtro filtro = new SaldoMenorQueCem(new AberturaMesAtual()));
 
             var contas = new List<Conta>()
             {

@@ -35,6 +35,7 @@ namespace Peedroca.DesignPattern.Exercise
             else
                 throw new System.ArgumentException("Já foi aplicado um desconto extra a esse orcamento.");
         }
+        
         public void Aprovar() 
         { 
             EstadoDoOrcamento.Aprovar(this);
