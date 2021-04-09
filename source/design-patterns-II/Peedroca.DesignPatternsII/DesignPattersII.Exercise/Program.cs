@@ -1,5 +1,6 @@
 ﻿using DesignPattersII.Exercise.Factories;
 using System;
+using System.Collections.Generic;
 
 namespace DesignPattersII.Exercise
 {
