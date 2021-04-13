@@ -1,4 +1,5 @@
 ﻿using DesignPattersII.Exercise.Factories;
+using DesignPattersII.Exercise.Models;
 using System;
 using System.Collections.Generic;
 
@@ -8,11 +9,11 @@ namespace DesignPattersII.Exercise
     {
         static void Main(string[] args)
         {
-            var connection = new ConnectionFactory().GetConnection();
-            var command = connection.CreateCommand();
-            command.CommandText = "select * from tabela";
+            var historico = new Historico();
+            var contrato = new Contrato(DateTime.Now, "Pedro", Enums.ETipoContrato.Novo);
+            historico.Adicionar(contrato.SalvarEstado());
 
-            Console.WriteLine("Hello World!");
+            Console.ReadKey();
         }
     }
 }
