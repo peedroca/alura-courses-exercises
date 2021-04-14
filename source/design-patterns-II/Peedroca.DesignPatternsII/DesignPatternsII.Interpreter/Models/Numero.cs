@@ -9,16 +9,21 @@ namespace DesignPatternsII.Interpreter.Models
 {
     public class Numero : IExpressao
     {
-        private int numero;
+        public int Valor { get; }
 
         public Numero(int numero)
         {
-            this.numero = numero;
+            this.Valor = numero;
+        }
+
+        public void Aceita(IVisitor visitor)
+        {
+            visitor.Imprimir(this);
         }
 
         public int Avalia()
         {
-            return numero;
+            return Valor;
         }
     }
 }

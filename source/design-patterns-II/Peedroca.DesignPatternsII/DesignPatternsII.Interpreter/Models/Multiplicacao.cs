@@ -9,13 +9,18 @@ namespace DesignPatternsII.Interpreter.Models
 {
     public class Multiplicacao : IExpressao
     {
-        private IExpressao Esquerda;
-        private IExpressao Direita;
+        public IExpressao Esquerda { get; }
+        public IExpressao Direita { get; }
 
         public Multiplicacao(IExpressao esquerda, IExpressao direita)
         {
             Esquerda = esquerda;
             Direita = direita;
+        }
+
+        public void Aceita(IVisitor visitor)
+        {
+            visitor.Imprimir(this);
         }
 
         public int Avalia()

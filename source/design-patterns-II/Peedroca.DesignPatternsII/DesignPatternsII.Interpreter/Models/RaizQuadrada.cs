@@ -9,11 +9,16 @@ namespace DesignPatternsII.Interpreter.Models
 {
     public class RaizQuadrada : IExpressao
     {
-        private IExpressao Expressao;
+        public IExpressao Expressao { get; }
 
         public RaizQuadrada(IExpressao expressao)
         {
             Expressao = expressao;
+        }
+
+        public void Aceita(IVisitor visitor)
+        {
+            visitor.Imprimir(this);
         }
 
         public int Avalia()

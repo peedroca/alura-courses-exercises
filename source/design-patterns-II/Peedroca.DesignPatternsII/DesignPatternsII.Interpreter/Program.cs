@@ -1,4 +1,5 @@
-﻿using DesignPatternsII.Interpreter.Models;
+﻿using DesignPatternsII.Interpreter.Interfaces;
+using DesignPatternsII.Interpreter.Models;
 using System;
 
 namespace DesignPatternsII.Interpreter
@@ -7,8 +8,11 @@ namespace DesignPatternsII.Interpreter
     {
         static void Main(string[] args)
         {
-            var conta = new RaizQuadrada(new Numero(144));
+            var conta = new RaizQuadrada(new Soma(new Numero(120), new Numero(24)));
+            IVisitor visitor = new PreFixaVisitor();
+            visitor.Imprimir(conta);
 
+            Console.WriteLine();
             Console.WriteLine(conta.Avalia());
             Console.ReadKey();
         }

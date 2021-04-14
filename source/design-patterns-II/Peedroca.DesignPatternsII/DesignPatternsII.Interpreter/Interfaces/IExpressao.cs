@@ -9,5 +9,6 @@ namespace DesignPatternsII.Interpreter.Interfaces
     public interface IExpressao
     {
         int Avalia();
+        void Aceita(IVisitor visitor);
     }
 }
