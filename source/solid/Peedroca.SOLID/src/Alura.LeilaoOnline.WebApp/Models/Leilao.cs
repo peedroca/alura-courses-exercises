@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations;
 namespace Alura.LeilaoOnline.WebApp.Models
 {
     public class Leilao
-    {        
+    {
         public int Id { get; set; }
-        
-        [Required(ErrorMessage = "Título é obrigatório")] 
+
+        [Required(ErrorMessage = "Título é obrigatório")]
         [Display(Name = "Título", Prompt = "Digite o título do leilão")]
         public string Titulo { get; set; }
 

@@ -1,7 +1,6 @@
-using System;
-using Xunit;
-using Microsoft.AspNetCore.Mvc;
 using Alura.LeilaoOnline.WebApp.Controllers;
+using Microsoft.AspNetCore.Mvc;
+using Xunit;
 
 namespace Alura.LeilaoOnline.Testes
 {

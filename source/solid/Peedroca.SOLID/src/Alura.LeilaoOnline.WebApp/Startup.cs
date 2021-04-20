@@ -9,7 +9,7 @@ namespace Alura.LeilaoOnline.WebApp
         {
             services
                 .AddControllersWithViews()
-                .AddNewtonsoftJson(options => 
+                .AddNewtonsoftJson(options =>
                 {
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });

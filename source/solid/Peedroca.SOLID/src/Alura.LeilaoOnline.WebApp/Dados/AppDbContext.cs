@@ -1,5 +1,5 @@
-using Microsoft.EntityFrameworkCore;
 using Alura.LeilaoOnline.WebApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Alura.LeilaoOnline.WebApp.Dados
 {

@@ -1,6 +1,6 @@
+using Alura.LeilaoOnline.WebApp.Seeding;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
-using Alura.LeilaoOnline.WebApp.Seeding;
 
 namespace Alura.LeilaoOnline.WebApp
 {

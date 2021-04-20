@@ -21,12 +21,14 @@ namespace Alura.LeilaoOnline.CLI
             {
                 MostrarComandos();
                 return;
-            } else if (args[0] == "listar")
+            }
+            else if (args[0] == "listar")
             {
                 // listar leilões
-                
 
-            } else if (args[0] == "detalhe")
+
+            }
+            else if (args[0] == "detalhe")
             {
                 // detalhe do leilão
 

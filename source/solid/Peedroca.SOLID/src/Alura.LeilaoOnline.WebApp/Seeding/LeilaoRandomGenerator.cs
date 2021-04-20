@@ -1,5 +1,5 @@
-using System;
 using Alura.LeilaoOnline.WebApp.Models;
+using System;
 
 namespace Alura.LeilaoOnline.WebApp.Seeding
 {
@@ -23,13 +23,13 @@ namespace Alura.LeilaoOnline.WebApp.Seeding
 
         private Categoria CategoriaQualquer()
         {
-            var indiceAleatorio = random.Next(0,5);
+            var indiceAleatorio = random.Next(0, 5);
             return categorias[indiceAleatorio];
         }
 
         private DateTime DataAleatoria()
         {
-            int diasAleatorios = random.Next(1,100);
+            int diasAleatorios = random.Next(1, 100);
             return DateTime.Now.AddDays(-diasAleatorios);
         }
 
@@ -41,7 +41,7 @@ namespace Alura.LeilaoOnline.WebApp.Seeding
                 // leilao.Id = random.Next(); será definido no loop de geração
                 leilao.Categoria = CategoriaQualquer();
                 leilao.Titulo = $"{leilao.Categoria.Descricao} - Lote nº {random.Next(500)}";
-                leilao.Descricao = $"{leilao.Titulo}. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo laoreet. Ut placerat orci nulla pellentesque dignissim enim sit amet. Cras semper auctor neque vitae. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Penatibus et magnis dis parturient montes nascetur ridiculus. Bibendum enim facilisis gravida neque convallis. At risus viverra adipiscing at in tellus integer feugiat scelerisque. Turpis egestas pretium aenean pharetra magna ac. Suspendisse ultrices gravida dictum fusce ut. Mauris vitae ultricies leo integer. Senectus et netus et malesuada fames ac turpis egestas. Libero volutpat sed cras ornare. Tristique senectus et netus et malesuada fames ac." ;
+                leilao.Descricao = $"{leilao.Titulo}. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut consequat semper viverra nam libero justo laoreet. Ut placerat orci nulla pellentesque dignissim enim sit amet. Cras semper auctor neque vitae. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. Penatibus et magnis dis parturient montes nascetur ridiculus. Bibendum enim facilisis gravida neque convallis. At risus viverra adipiscing at in tellus integer feugiat scelerisque. Turpis egestas pretium aenean pharetra magna ac. Suspendisse ultrices gravida dictum fusce ut. Mauris vitae ultricies leo integer. Senectus et netus et malesuada fames ac turpis egestas. Libero volutpat sed cras ornare. Tristique senectus et netus et malesuada fames ac.";
                 leilao.Situacao = this.SituacaoAleatoria();
                 if (leilao.Situacao != SituacaoLeilao.Rascunho)
                 {
