@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Alura.LeilaoOnline.WebApp.Dados
+namespace Alura.LeilaoOnline.WebApp.Dados.EfCore
 {
-    public class CategoriaDao
+    public class CategoriaDaoEfCore : ICategoriaDao
     {
         private AppDbContext _context;
 
-        public CategoriaDao()
+        public CategoriaDaoEfCore()
         {
             _context = new AppDbContext();
         }
