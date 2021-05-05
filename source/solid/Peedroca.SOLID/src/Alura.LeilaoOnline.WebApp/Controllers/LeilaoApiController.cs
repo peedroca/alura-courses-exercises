@@ -59,7 +59,5 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
 
             return NoContent();
         }
-
-
     }
 }

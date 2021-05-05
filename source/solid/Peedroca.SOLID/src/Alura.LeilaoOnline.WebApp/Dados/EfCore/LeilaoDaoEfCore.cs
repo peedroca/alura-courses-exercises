@@ -8,6 +8,11 @@ namespace Alura.LeilaoOnline.WebApp.Dados.EfCore
     {
         private AppDbContext _context;
 
+        public LeilaoDaoEfCore(AppDbContext context)
+        {
+            _context = context;
+        }
+
         public Leilao Obter(long id) =>
             _context.Leiloes.Find(id);
 

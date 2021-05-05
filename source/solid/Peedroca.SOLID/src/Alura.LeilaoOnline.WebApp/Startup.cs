@@ -16,8 +16,10 @@ namespace Alura.LeilaoOnline.WebApp
                     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
 
-            services.AddScoped<ILeilaoDao, LeilaoDaoEfCore>();
-            services.AddScoped<ICategoriaDao, CategoriaDaoEfCore>();
+            services.AddTransient<ILeilaoDao, LeilaoDaoEfCore>();
+            services.AddTransient<ICategoriaDao, CategoriaDaoEfCore>();
+
+            services.AddDbContext<AppDbContext>();
         }
 
         public void Configure(IApplicationBuilder app)

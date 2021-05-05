@@ -1,5 +1,6 @@
 using Alura.LeilaoOnline.WebApp.Dados;
 using Alura.LeilaoOnline.WebApp.Models;
+using Alura.LeilaoOnline.WebApp.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
@@ -8,25 +9,23 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
 {
     public class LeilaoController : Controller
     {
-        private ILeilaoDao _dao;
-        private ICategoriaDao _categoriaDao;
+        private readonly IAdminService _service;
 
-        public LeilaoController(ILeilaoDao leilaoDao, ICategoriaDao categoriaDao)
+        public LeilaoController(IAdminService service)
         {
-            _dao = leilaoDao;
-            _categoriaDao = categoriaDao;
+            _service = service;
         }
 
         public IActionResult Index()
         {
-            var leiloes = _dao.Listar();
+            var leiloes = _service.ListarLeilao();
             return View(leiloes);
         }
 
         [HttpGet]
         public IActionResult Insert()
         {
-            ViewData["Categorias"] = _categoriaDao.Listar();
+            ViewData["Categorias"] = _service.ListarCategoria();
             ViewData["Operacao"] = "Inclusão";
             return View("Form");
         }
@@ -36,11 +35,11 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                _dao.Adicionar(model);
+                _service.CriarLeilao(model);
                 return RedirectToAction("Index");
             }
 
-            ViewData["Categorias"] = _categoriaDao.Listar();
+            ViewData["Categorias"] = _service.ListarCategoria();
             ViewData["Operacao"] = "Inclusão";
             return View("Form", model);
         }
@@ -48,10 +47,10 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            ViewData["Categorias"] = _categoriaDao.Listar();
+            ViewData["Categorias"] = _service.ListarCategoria();
             ViewData["Operacao"] = "Edição";
 
-            var leilao = _dao.Obter(id);
+            var leilao = _service.ObterLeilao(id);
 
             if (leilao == null)
                 return NotFound();
@@ -64,11 +63,11 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                _dao.Adicionar(model);
+                _service.AlterarLeilao(model);
                 return RedirectToAction("Index");
             }
 
-            ViewData["Categorias"] = _categoriaDao.Listar();
+            ViewData["Categorias"] = _service.ListarCategoria();
             ViewData["Operacao"] = "Edição";
 
             return View("Form", model);
@@ -77,20 +76,23 @@ namespace Alura.LeilaoOnline.WebApp.Controllers
         [HttpPost]
         public IActionResult Inicia(int id)
         {
-            var leilao = _dao.Obter(id);
-
-            if (leilao == null)
-                return NotFound();
-
-            if (leilao.Situacao != SituacaoLeilao.Rascunho)
+            try
+            {
+                _service.IniciarLeilao(id);
+                return RedirectToAction("Index");
+            }
+            catch (InvalidOperationException)
+            {
                 return StatusCode(405);
-
-            leilao.Situacao = SituacaoLeilao.Pregao;
-            leilao.Inicio = DateTime.Now;
-
-            _dao.Atualizar(leilao);
-
-            return RedirectToAction("Index");
+            }
+            catch (NullReferenceException)
+            {
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return StatusCode(500);
+            }
         }
 
         [HttpPost]
