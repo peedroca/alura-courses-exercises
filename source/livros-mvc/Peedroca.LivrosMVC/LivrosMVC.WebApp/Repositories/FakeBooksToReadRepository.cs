@@ -1,24 +1,21 @@
-﻿using System.Collections.Generic;
+﻿using LivrosMVC.WebApp.Entities;
+using LivrosMVC.WebApp.Enums;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LivrosMVC.WebApp.Repositories
 {
-    public sealed class FakeBooksToReadRepository : IBooksRepository
+    public sealed class FakeBooksToReadRepository : IBooksToReadRepository
     {
-        public IEnumerable<string> Get()
-        {
-            var response = new List<string>()
-            {
-                "Orgulho e Preconceito - Jane Austen.",
-                "1984 - George Orwell.",
-                "Dom Quixote de la Mancha - Miguel de Cervantes.",
-                "O Pequeno Príncipe - Antoine de Saint-Exupéry.",
-                "Dom Casmurro - Machado de Assis.",
-                "O Bandolim do Capitão Corelli -Louis de Bernières.",
-                "O Conde de Monte Cristo - Alexandre Dumas.",
-                "Um Estudo em Vermelho -Arthur Conan Doyle."
-            };
+        public void Add(Book obj) =>
+            FakeDB.AddNewBook(obj);
 
-            return response;
-        }
+        public Book Get(int Id) =>
+            FakeDB.Books.FirstOrDefault(w => w.Id == Id);
+
+        public IEnumerable<Book> Get() =>
+            FakeDB.Books
+            .Where(w => w.Status == EStatus.ToRead)
+            .ToList();
     }
 }

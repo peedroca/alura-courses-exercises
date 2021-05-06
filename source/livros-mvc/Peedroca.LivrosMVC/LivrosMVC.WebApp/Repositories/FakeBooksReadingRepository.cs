@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using LivrosMVC.WebApp.Entities;
+using LivrosMVC.WebApp.Enums;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LivrosMVC.WebApp.Repositories
 {
-    public sealed class FakeBooksReadingRepository : IBooksRepository
+    public sealed class FakeBooksReadingRepository : IBooksReadingRepository
     {
-        public IEnumerable<string> Get()
-        {
-            var response = new List<string>()
-            {
-                "O Bandolim do Capitão Corelli -Louis de Bernières.",
-                "Um Estudo em Vermelho -Arthur Conan Doyle."
-            };
+        public IEnumerable<Book> Get() => 
+            FakeDB.Books
+            .Where(w => w.Status == EStatus.Reading)
+            .ToList();
 
-            return response;
-        }
+        public Book Get(int Id) =>
+            FakeDB.Books.FirstOrDefault(w => w.Id == Id);
     }
 }

@@ -1,19 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using LivrosMVC.WebApp.Entities;
+using LivrosMVC.WebApp.Enums;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace LivrosMVC.WebApp.Repositories
 {
-    public sealed class FakeBooksReadRepository : IBooksRepository
+    public sealed class FakeBooksReadRepository : IBooksReadRepository
     {
-        public IEnumerable<string> Get()
-        {
-            var response = new List<string>()
-            {
-                "1984 - George Orwell.",
-                "Dom Casmurro - Machado de Assis.",
-                "O Conde de Monte Cristo - Alexandre Dumas."
-            };
+        public IEnumerable<Book> Get() =>
+            FakeDB.Books
+            .Where(w => w.Status == EStatus.Read)
+            .ToList();
 
-            return response;
-        }
+        public Book Get(int Id) =>
+            FakeDB.Books.FirstOrDefault(w => w.Id == Id);
     }
 }

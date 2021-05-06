@@ -2,9 +2,8 @@
 
 namespace LivrosMVC.WebApp.Repositories
 {
-    interface IQuery<T>
+    interface ICommand<T>
     {
-        IEnumerable<T> Get();
-        T Get(int Id);
+        void Add(T obj);
     }
 }
